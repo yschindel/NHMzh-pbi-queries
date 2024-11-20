@@ -1,6 +1,7 @@
 import requests
 import duckdb
 import pandas as pd
+
 def get_data_from_pbi_server(url, project, filename):
     params = {
         "name": filename,
@@ -23,7 +24,7 @@ def get_all_data_files(url):
 # Example usage
 url = "http://localhost:3000/data"
 try:
-    data_files = get_all_data_files(url + "/all")
+    data_files = get_all_data_files(url + "/list")
 
 
     for file in data_files:
