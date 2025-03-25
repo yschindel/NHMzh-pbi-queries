@@ -7,6 +7,8 @@ let
                 fileid,
                 timestamp,
                 id,
+                NULL as sequence,
+                'element' as row_type,
                 MAX(CASE WHEN param_name = 'ifcType' THEN param_value_string END) AS ifcType,
                 MAX(CASE WHEN param_name = 'level' THEN param_value_string END) AS level,
                 MAX(CASE WHEN param_name = 'cost' THEN param_value_number END) AS cost,
@@ -14,18 +16,36 @@ let
                 MAX(CASE WHEN param_name = 'ebkph' THEN param_value_string END) AS ebkph,
                 MAX(CASE WHEN param_name = 'ebkph_1' THEN param_value_string END) AS ebkph_1,
                 MAX(CASE WHEN param_name = 'ebkph_2' THEN param_value_string END) AS ebkph_2,
-                MAX(CASE WHEN param_name = 'ebkph_3' THEN param_value_string END) AS ebkph_3
+                MAX(CASE WHEN param_name = 'ebkph_3' THEN param_value_string END) AS ebkph_3,
+                CAST(MAX(CASE WHEN param_name = 'is_structural' THEN CAST(param_value_boolean AS INT) END) AS BIT) AS is_structural,
+                NULL as material,
+                NULL as gwp_absolute,
+                NULL as gwp_relative,
+                NULL as penr_absolute,
+                NULL as penr_relative,
+                NULL as ubp_absolute,
+                NULL as ubp_relative
             FROM [dbo].[data_eav_elements]
             GROUP BY project, filename, fileid, timestamp, id
         ),
         MaterialProperties AS (
             SELECT 
-                project,
-                filename,
-                fileid,
-                timestamp,
-                id,
-                sequence,
+                m.project,
+                m.filename,
+                m.fileid,
+                m.timestamp,
+                m.id,
+                m.sequence,
+                'material' as row_type,
+                e.ifcType,
+                e.level,
+                NULL as cost,
+                NULL as cost_unit,
+                e.ebkph,
+                e.ebkph_1,
+                e.ebkph_2,
+                e.ebkph_3,
+                e.is_structural,
                 MAX(CASE WHEN param_name = 'mat_kbob' THEN param_value_string END) AS material,
                 MAX(CASE WHEN param_name = 'gwp_absolute' THEN param_value_number END) AS gwp_absolute,
                 MAX(CASE WHEN param_name = 'gwp_relative' THEN param_value_number END) AS gwp_relative,
@@ -33,42 +53,23 @@ let
                 MAX(CASE WHEN param_name = 'penr_relative' THEN param_value_number END) AS penr_relative,
                 MAX(CASE WHEN param_name = 'ubp_absolute' THEN param_value_number END) AS ubp_absolute,
                 MAX(CASE WHEN param_name = 'ubp_relative' THEN param_value_number END) AS ubp_relative
-            FROM [dbo].[data_eav_materials]
-            GROUP BY project, filename, fileid, timestamp, id, sequence
+            FROM [dbo].[data_eav_materials] m
+            LEFT JOIN ElementProperties e ON 
+                m.project = e.project AND 
+                m.filename = e.filename AND 
+                m.fileid = e.fileid AND 
+                m.timestamp = e.timestamp AND 
+                m.id = e.id
+            GROUP BY m.project, m.filename, m.fileid, m.timestamp, m.id, m.sequence,
+                     e.ifcType, e.level, e.ebkph, e.ebkph_1, e.ebkph_2, e.ebkph_3, e.is_structural
         )
-        SELECT 
-            m.project,
-            m.filename,
-            m.fileid,
-            m.timestamp,
-            m.id,
-            m.sequence,
-            -- Element Properties
-            e.ifcType,
-            e.level,
-            e.cost,
-            e.cost_unit,
-            e.ebkph,
-            e.ebkph_1,
-            e.ebkph_2,
-            e.ebkph_3,
-            -- Material Properties
-            m.material,
-            m.gwp_absolute,
-            m.gwp_relative,
-            m.penr_absolute,
-            m.penr_relative,
-            m.ubp_absolute,
-            m.ubp_relative
-        FROM MaterialProperties m
-        LEFT JOIN ElementProperties e ON 
-            m.project = e.project AND 
-            m.filename = e.filename AND 
-            m.fileid = e.fileid AND 
-            m.timestamp = e.timestamp AND 
-            m.id = e.id
-        WHERE m.fileid = '"&FileIdSelected&"'
-        ORDER BY m.project, m.filename, m.id, m.sequence
+        SELECT * FROM (
+            SELECT * FROM ElementProperties
+            UNION ALL
+            SELECT * FROM MaterialProperties
+        ) combined
+        WHERE fileid = '"&FileIdSelected&"'
+        ORDER BY project, filename, id, sequence
     ", CreateNavigationProperties=false])
 in
     Source
