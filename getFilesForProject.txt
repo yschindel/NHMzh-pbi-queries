@@ -1,0 +1,9 @@
+let
+    Source = Sql.Database("sql-nhmzh-vis-dev.database.windows.net", "sqldb-nhmzh-vis-dev", [Query="
+    SELECT DISTINCT 
+    filename, 
+    project,
+FROM data_updates
+    WHERE project = '"&ProjectSelected&"'
+in
+    Source
