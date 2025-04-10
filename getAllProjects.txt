@@ -2,6 +2,6 @@ let
     Source = Sql.Database("sql-nhmzh-vis-dev.database.windows.net", "sqldb-nhmzh-vis-dev", [Query="
     SELECT DISTINCT 
     project
-FROM  data_updates
+FROM  data_updates;", CreateNavigationProperties=false])
 in
     Source

@@ -4,20 +4,16 @@ let
             SELECT 
                 project,
                 filename,
-                fileid,
                 timestamp,
                 id,
                 NULL as sequence,
                 'element' as row_type,
-                MAX(CASE WHEN param_name = 'ifcType' THEN param_value_string END) AS ifcType,
+                MAX(CASE WHEN param_name = 'category' THEN param_value_string END) AS category,
                 MAX(CASE WHEN param_name = 'level' THEN param_value_string END) AS level,
                 MAX(CASE WHEN param_name = 'cost' THEN param_value_number END) AS cost,
                 MAX(CASE WHEN param_name = 'cost_unit' THEN param_value_number END) AS cost_unit,
-                MAX(CASE WHEN param_name = 'ebkph' THEN param_value_string END) AS ebkph,
-                MAX(CASE WHEN param_name = 'ebkph_1' THEN param_value_string END) AS ebkph_1,
-                MAX(CASE WHEN param_name = 'ebkph_2' THEN param_value_string END) AS ebkph_2,
-                MAX(CASE WHEN param_name = 'ebkph_3' THEN param_value_string END) AS ebkph_3,
-                CAST(MAX(CASE WHEN param_name = 'is_structural' THEN CAST(param_value_boolean AS INT) END) AS BIT) AS is_structural,
+                MAX(CASE WHEN param_name = 'eBKP' THEN param_value_string END) AS eBKP,
+                CAST(MAX(CASE WHEN param_name = 'LoadBearing' THEN CAST(param_value_boolean AS INT) END) AS BIT) AS LoadBearing,
                 NULL as material,
                 NULL as gwp_absolute,
                 NULL as gwp_relative,
@@ -26,26 +22,22 @@ let
                 NULL as ubp_absolute,
                 NULL as ubp_relative
             FROM [dbo].[data_eav_elements]
-            GROUP BY project, filename, fileid, timestamp, id
+            GROUP BY project, filename, timestamp, id
         ),
         MaterialProperties AS (
             SELECT 
                 m.project,
                 m.filename,
-                m.fileid,
                 m.timestamp,
                 m.id,
                 m.sequence,
                 'material' as row_type,
-                e.ifcType,
+                e.category,
                 e.level,
                 NULL as cost,
                 NULL as cost_unit,
-                e.ebkph,
-                e.ebkph_1,
-                e.ebkph_2,
-                e.ebkph_3,
-                e.is_structural,
+                e.eBKP,
+                e.LoadBearing,
                 MAX(CASE WHEN param_name = 'mat_kbob' THEN param_value_string END) AS material,
                 MAX(CASE WHEN param_name = 'gwp_absolute' THEN param_value_number END) AS gwp_absolute,
                 MAX(CASE WHEN param_name = 'gwp_relative' THEN param_value_number END) AS gwp_relative,
@@ -57,18 +49,18 @@ let
             LEFT JOIN ElementProperties e ON 
                 m.project = e.project AND 
                 m.filename = e.filename AND 
-                m.fileid = e.fileid AND 
                 m.timestamp = e.timestamp AND 
                 m.id = e.id
-            GROUP BY m.project, m.filename, m.fileid, m.timestamp, m.id, m.sequence,
-                     e.ifcType, e.level, e.ebkph, e.ebkph_1, e.ebkph_2, e.ebkph_3, e.is_structural
+            GROUP BY m.project, m.filename, m.timestamp, m.id, m.sequence,
+                     e.category, e.level, e.eBKP, e.LoadBearing
         )
         SELECT * FROM (
             SELECT * FROM ElementProperties
             UNION ALL
             SELECT * FROM MaterialProperties
         ) combined
-        WHERE fileid = '"&FileIdSelected&"'
+        WHERE project = '"&ProjectSelected&"'
+        AND filename = '"&FileSelected&"'
         ORDER BY project, filename, id, sequence
     ", CreateNavigationProperties=false])
 in
