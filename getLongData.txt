@@ -1,6 +1,6 @@
 let
     Source = Sql.Database("sql-nhmzh-vis-dev.database.windows.net", "sqldb-nhmzh-vis-dev", [Query="
-        WITH ElementProperties AS (
+               WITH ElementProperties AS (
             SELECT 
                 project,
                 filename,
@@ -13,6 +13,9 @@ let
                 MAX(CASE WHEN param_name = 'cost' THEN param_value_number END) AS cost,
                 MAX(CASE WHEN param_name = 'cost_unit' THEN param_value_number END) AS cost_unit,
                 MAX(CASE WHEN param_name = 'eBKP' THEN param_value_string END) AS eBKP,
+                LEFT(MAX(CASE WHEN param_name = 'eBKP' THEN param_value_string END), 1) AS eBKP_first_letter,
+                SUBSTRING(MAX(CASE WHEN param_name = 'eBKP' THEN param_value_string END), 2, 2) AS eBKP_first_number,
+                SUBSTRING(MAX(CASE WHEN param_name = 'eBKP' THEN param_value_string END), 5, 2) AS eBKP_second_number,
                 CAST(MAX(CASE WHEN param_name = 'LoadBearing' THEN CAST(param_value_boolean AS INT) END) AS BIT) AS LoadBearing,
                 NULL as material,
                 NULL as gwp_absolute,
@@ -37,6 +40,9 @@ let
                 NULL as cost,
                 NULL as cost_unit,
                 e.eBKP,
+                LEFT(e.eBKP, 1) AS eBKP_first_letter,
+                SUBSTRING(e.eBKP, 2, 2) AS eBKP_first_number,
+                SUBSTRING(e.eBKP, 5, 2) AS eBKP_second_number,
                 e.LoadBearing,
                 MAX(CASE WHEN param_name = 'mat_kbob' THEN param_value_string END) AS material,
                 MAX(CASE WHEN param_name = 'gwp_absolute' THEN param_value_number END) AS gwp_absolute,
@@ -52,16 +58,22 @@ let
                 m.timestamp = e.timestamp AND 
                 m.id = e.id
             GROUP BY m.project, m.filename, m.timestamp, m.id, m.sequence,
-                     e.category, e.level, e.eBKP, e.LoadBearing
-        )
-        SELECT * FROM (
+                     e.category, e.level, e.eBKP, e.eBKP_first_letter, e.eBKP_first_number, e.eBKP_second_number, e.LoadBearing
+        ),
+        CombinedData AS (
             SELECT * FROM ElementProperties
             UNION ALL
             SELECT * FROM MaterialProperties
-        ) combined
-        WHERE project = '"&ProjectSelected&"'
-        AND filename = '"&FileSelected&"'
-        ORDER BY project, filename, id, sequence
+        )
+        SELECT 
+            c.*,
+            du.model_blob_id
+        FROM CombinedData c
+        LEFT JOIN [dbo].[data_updates] du ON 
+            c.project = du.project AND 
+            c.filename = du.filename AND 
+            c.timestamp = du.timestamp
+        ORDER BY c.project, c.filename, c.id, c.sequence
     ", CreateNavigationProperties=false])
 in
     Source
