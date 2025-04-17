@@ -1,11 +1,11 @@
-code,text_letter,text_number,description
-A,Grundstück,,Grundstück
-A01,Grundstück,,"Grundstück, Baurecht"
+code,text_letter,text_number1,text_number2
+A,Grundstück,,
+A01,Grundstück,"Grundstück, Baurecht",
 A01.01,Grundstück,"Grundstück, Baurecht",Grundstückserwerb
 A01.02,Grundstück,"Grundstück, Baurecht",Baurechtserwerb
 A01.03,Grundstück,"Grundstück, Baurecht",Bauwerkserwerb
 A01.04,Grundstück,"Grundstück, Baurecht",Perimeterbeitrag
-A02,Grundstück,,"Nebenkosten zu Grundstück, Baurecht"
+A02,Grundstück,"Nebenkosten zu Grundstück, Baurecht",
 A02.01,Grundstück,"Nebenkosten zu Grundstück, Baurecht","Handänderungssteuer, Gewinnsteuer"
 A02.02,Grundstück,"Nebenkosten zu Grundstück, Baurecht",Notariatskosten
 A02.03,Grundstück,"Nebenkosten zu Grundstück, Baurecht",Grundbuchgebühr
@@ -13,13 +13,13 @@ A02.04,Grundstück,"Nebenkosten zu Grundstück, Baurecht","Anwaltskosten, Gerich
 A02.05,Grundstück,"Nebenkosten zu Grundstück, Baurecht",Vermittlungsprovision
 A02.06,Grundstück,"Nebenkosten zu Grundstück, Baurecht","Abfindung, Servitut"
 A02.07,Grundstück,"Nebenkosten zu Grundstück, Baurecht","Vermessung, Vermarkung"
-B,Vorbereitung,,Vorbereitung
-B01,Vorbereitung,,"Untersuchung, Aufnahme, Messung"
+B,Vorbereitung,,
+B01,Vorbereitung,"Untersuchung, Aufnahme, Messung",
 B01.01,Vorbereitung,"Untersuchung, Aufnahme, Messung",Baugrunduntersuchung
 B01.02,Vorbereitung,"Untersuchung, Aufnahme, Messung",Bestandsaufnahme
 B01.03,Vorbereitung,"Untersuchung, Aufnahme, Messung",Umweltmessung
 B01.04,Vorbereitung,"Untersuchung, Aufnahme, Messung",Überwachung
-B02,Vorbereitung,,Baustelleneinrichtung
+B02,Vorbereitung,Baustelleneinrichtung,
 B02.01,Vorbereitung,Baustelleneinrichtung,Baustellenerschliessung
 B02.02,Vorbereitung,Baustelleneinrichtung,"Versorgung, Entsorgung"
 B02.03,Vorbereitung,Baustelleneinrichtung,"Arbeitsraum, Aufenthaltsraum"
@@ -28,13 +28,13 @@ B02.05,Vorbereitung,Baustelleneinrichtung,Einrichtung für Materialaufbereitung
 B02.06,Vorbereitung,Baustelleneinrichtung,Witterungsbedingte Baumassnahme
 B02.07,Vorbereitung,Baustelleneinrichtung,"Baustellenorganisation, Sicherheit"
 B02.08,Vorbereitung,Baustelleneinrichtung,Schutzmassnahme für Umgebung
-B03,Vorbereitung,,Provisorium
+B03,Vorbereitung,Provisorium,
 B03.01,Vorbereitung,Provisorium,Provisorisches Rückhaltesystem
 B03.02,Vorbereitung,Provisorium,Provisorische Werkleitung
 B03.03,Vorbereitung,Provisorium,Provisorisches Gebäude
 B03.04,Vorbereitung,Provisorium,Provisorische Verkehrsanlage
 B03.05,Vorbereitung,Provisorium,"Provisorischer Ausbau, Ausstattung"
-B04,Vorbereitung,,Erschliessung durch Werkleitungen
+B04,Vorbereitung,Erschliessung durch Werkleitungen,
 B04.01,Vorbereitung,Erschliessung durch Werkleitungen,Starkstromleitung
 B04.02,Vorbereitung,Erschliessung durch Werkleitungen,Schwachstromleitung
 B04.03,Vorbereitung,Erschliessung durch Werkleitungen,Fernwärmeleitung
@@ -43,45 +43,45 @@ B04.05,Vorbereitung,Erschliessung durch Werkleitungen,Wasserleitung
 B04.06,Vorbereitung,Erschliessung durch Werkleitungen,Schmutzwasserleitung
 B04.07,Vorbereitung,Erschliessung durch Werkleitungen,Regenwasserleitung
 B04.08,Vorbereitung,Erschliessung durch Werkleitungen,Gasleitung
-B05,Vorbereitung,,"Rodung, Rückbau"
+B05,Vorbereitung,"Rodung, Rückbau",
 B05.01,Vorbereitung,"Rodung, Rückbau","Fällung, Rodung, Umpflanzung"
 B05.02,Vorbereitung,"Rodung, Rückbau",Nicht kontaminierter Rückbau
 B05.03,Vorbereitung,"Rodung, Rückbau",Kontaminierter Rückbau
-B06,Vorbereitung,,Baugrube
+B06,Vorbereitung,Baugrube,
 B06.01,Vorbereitung,Baugrube,Nicht kontaminierter Aushub
 B06.02,Vorbereitung,Baugrube,Kontaminierter Aushub
 B06.03,Vorbereitung,Baugrube,Böschungssicherung
 B06.04,Vorbereitung,Baugrube,Baugrubenabschluss
 B06.05,Vorbereitung,Baugrube,Materialeinbau
 B06.06,Vorbereitung,Baugrube,Wasserhaltung
-B07,Vorbereitung,,"Baugrundverbesserung, Bauwerkssicherung"
+B07,Vorbereitung,"Baugrundverbesserung, Bauwerkssicherung",
 B07.01,Vorbereitung,"Baugrundverbesserung, Bauwerkssicherung",Verbesserung Baugrund
 B07.02,Vorbereitung,"Baugrundverbesserung, Bauwerkssicherung",Pfählung
 B07.03,Vorbereitung,"Baugrundverbesserung, Bauwerkssicherung",Unterfangung Bauwerk
 B07.04,Vorbereitung,"Baugrundverbesserung, Bauwerkssicherung",Sicherung Bauwerk
-B08,Vorbereitung,,Gerüst
+B08,Vorbereitung,Gerüst,
 B08.01,Vorbereitung,Gerüst,Fassadengerüst
 B08.02,Vorbereitung,Gerüst,Arbeitsgerüst
 B08.03,Vorbereitung,Gerüst,Notdach
 B08.04,Vorbereitung,Gerüst,Schutzgerüst
-B09,Vorbereitung,,Anpassung angrenzendes Bauwerk
+B09,Vorbereitung,Anpassung angrenzendes Bauwerk,
 B09.01,Vorbereitung,Anpassung angrenzendes Bauwerk,Bauliche Anpassung angrenzendes Bauwerk
 B09.02,Vorbereitung,Anpassung angrenzendes Bauwerk,"Unterfangung, Sicherung angrenzendes Bauwerk"
 B09.03,Vorbereitung,Anpassung angrenzendes Bauwerk,Verkehrsanlage ausserhalb Grundstück
-C,Konstruktion Gebäude,,Konstruktion Gebäude
-C01,Konstruktion Gebäude,,"Fundament, Bodenplatte"
+C,Konstruktion Gebäude,,
+C01,Konstruktion Gebäude,"Fundament, Bodenplatte",
 C01.01,Konstruktion Gebäude,"Fundament, Bodenplatte","Unterbau Fundament, Bodenplatte"
 C01.02,Konstruktion Gebäude,"Fundament, Bodenplatte",Fundament
 C01.03,Konstruktion Gebäude,"Fundament, Bodenplatte",Bodenplatte
 C01.04,Konstruktion Gebäude,"Fundament, Bodenplatte","Erdverbundene Treppe, Rampe"
 C01.05,Konstruktion Gebäude,"Fundament, Bodenplatte",Erdverbundenes Podest
-C02,Konstruktion Gebäude,,Wandkonstruktion
+C02,Konstruktion Gebäude,Wandkonstruktion,
 C02.01,Konstruktion Gebäude,Wandkonstruktion,Aussenwandkonstruktion
 C02.02,Konstruktion Gebäude,Wandkonstruktion,Innenwandkonstruktion
-C03,Konstruktion Gebäude,,Stützenkonstruktion
+C03,Konstruktion Gebäude,Stützenkonstruktion,
 C03.01,Konstruktion Gebäude,Stützenkonstruktion,Aussenstütze
 C03.02,Konstruktion Gebäude,Stützenkonstruktion,Innenstütze
-C04,Konstruktion Gebäude,,"Deckenkonstruktion, Dachkonstruktion"
+C04,Konstruktion Gebäude,"Deckenkonstruktion, Dachkonstruktion",
 C04.01,Konstruktion Gebäude,"Deckenkonstruktion, Dachkonstruktion",Geschossdecke
 C04.02,Konstruktion Gebäude,"Deckenkonstruktion, Dachkonstruktion","Innen liegende Treppe, Rampe"
 C04.03,Konstruktion Gebäude,"Deckenkonstruktion, Dachkonstruktion",Innen liegendes Podest
@@ -90,11 +90,11 @@ C04.05,Konstruktion Gebäude,"Deckenkonstruktion, Dachkonstruktion",Konstruktion
 C04.06,Konstruktion Gebäude,"Deckenkonstruktion, Dachkonstruktion","Aussen liegende Treppe, Rampe"
 C04.07,Konstruktion Gebäude,"Deckenkonstruktion, Dachkonstruktion",Aussen liegendes Podest
 C04.08,Konstruktion Gebäude,"Deckenkonstruktion, Dachkonstruktion","Aussen liegende Konstruktion, Vordach"
-C05,Konstruktion Gebäude,,Ergänzende Leistung zu Konstruktion
+C05,Konstruktion Gebäude,Ergänzende Leistung zu Konstruktion,
 C05.01,Konstruktion Gebäude,Ergänzende Leistung zu Konstruktion,"Durchbruch, Schlitz zu Konstruktion"
 C05.02,Konstruktion Gebäude,Ergänzende Leistung zu Konstruktion,"Maschinensockel, Einlage"
-D,Technik Gebäude,,Technik Gebäude
-D01,Technik Gebäude,,Elektroanlage
+D,Technik Gebäude,,
+D01,Technik Gebäude,Elektroanlage,
 D01.01,Technik Gebäude,Elektroanlage,Anlage Erzeugung Starkstrom
 D01.02,Technik Gebäude,Elektroanlage,Transformierung Starkstrom
 D01.03,Technik Gebäude,Elektroanlage,Speicherung Starkstrom
@@ -106,7 +106,7 @@ D01.08,Technik Gebäude,Elektroanlage,Transformierung Schwachstrom
 D01.09,Technik Gebäude,Elektroanlage,Speicherung Schwachstrom
 D01.10,Technik Gebäude,Elektroanlage,Installation Schwachstrom
 D01.11,Technik Gebäude,Elektroanlage,Verbraucher Schwachstrom
-D02,Technik Gebäude,,Gebäudeautomation
+D02,Technik Gebäude,Gebäudeautomation,
 D02.01,Technik Gebäude,Gebäudeautomation,Managementebene
 D02.02,Technik Gebäude,Gebäudeautomation,Automationsebene
 D02.03,Technik Gebäude,Gebäudeautomation,Feldebene
@@ -114,12 +114,12 @@ D02.04,Technik Gebäude,Gebäudeautomation,Raumautomation
 D02.05,Technik Gebäude,Gebäudeautomation,Automatonsnetzwerk
 D02.06,Technik Gebäude,Gebäudeautomation,Schaltgerätekombination
 D02.07,Technik Gebäude,Gebäudeautomation,Systemintegration
-D03,Technik Gebäude,,Sicherheitsanlage
+D03,Technik Gebäude,Sicherheitsanlage,
 D03.01,Technik Gebäude,Sicherheitsanlage,"Einbruchmeldeanlage, Überfallmeldeanlage"
 D03.02,Technik Gebäude,Sicherheitsanlage,Zutrittskontrollanlage
 D03.03,Technik Gebäude,Sicherheitsanlage,Videoüberwachungsanlage
 D03.04,Technik Gebäude,Sicherheitsanlage,Schliessanlage
-D04,Technik Gebäude,,Technische Brandschutzanlage
+D04,Technik Gebäude,Technische Brandschutzanlage,
 D04.01,Technik Gebäude,Technische Brandschutzanlage,Brandmeldeanlage
 D04.02,Technik Gebäude,Technische Brandschutzanlage,Gaswarnanlage
 D04.03,Technik Gebäude,Technische Brandschutzanlage,Nasslöschanlage
@@ -127,105 +127,105 @@ D04.04,Technik Gebäude,Technische Brandschutzanlage,Trockenlöschanlage
 D04.05,Technik Gebäude,Technische Brandschutzanlage,Löschgerät
 D04.06,Technik Gebäude,Technische Brandschutzanlage,Rauch- und Wärmebehandlungsanlage
 D04.07,Technik Gebäude,Technische Brandschutzanlage,Elektroakustische Lautsprecheranlage
-D05,Technik Gebäude,,Wärmetechnische Anlage
+D05,Technik Gebäude,Wärmetechnische Anlage,
 D05.01,Technik Gebäude,Wärmetechnische Anlage,"Wärmequelle, -senke, Brennstofflager"
 D05.02,Technik Gebäude,Wärmetechnische Anlage,Wärmeerzeugung
 D05.03,Technik Gebäude,Wärmetechnische Anlage,Wärmespeicherung
 D05.04,Technik Gebäude,Wärmetechnische Anlage,Wärmeverteilung
 D05.05,Technik Gebäude,Wärmetechnische Anlage,Wärmeabgabe
 D05.06,Technik Gebäude,Wärmetechnische Anlage,Wärmebezug: Investitionsanteil
-D06,Technik Gebäude,,Kältetechnische Anlage
+D06,Technik Gebäude,Kältetechnische Anlage,
 D06.01,Technik Gebäude,Kältetechnische Anlage,"Kältequelle, -senke, Brennstofflager"
 D06.02,Technik Gebäude,Kältetechnische Anlage,Kälteerzeugung
 D06.03,Technik Gebäude,Kältetechnische Anlage,Kältespeicherung
 D06.04,Technik Gebäude,Kältetechnische Anlage,Kälteverteilung
 D06.05,Technik Gebäude,Kältetechnische Anlage,Kälteabgabe
 D06.06,Technik Gebäude,Kältetechnische Anlage,Kältebezug: Investitionsanteil
-D07,Technik Gebäude,,Lufttechnische Anlage
+D07,Technik Gebäude,Lufttechnische Anlage,
 D07.01,Technik Gebäude,Lufttechnische Anlage,"Aussenluftversorgung, Fortluftführung"
 D07.02,Technik Gebäude,Lufttechnische Anlage,Luftaufbereitung
 D07.03,Technik Gebäude,Lufttechnische Anlage,Luftwärmespeicherung
 D07.04,Technik Gebäude,Lufttechnische Anlage,Luftverteilung
 D07.05,Technik Gebäude,Lufttechnische Anlage,Luftabgabe
 D07.06,Technik Gebäude,Lufttechnische Anlage,Luft: Investitionsanteil
-D08,Technik Gebäude,,Wassertechnische Anlage
+D08,Technik Gebäude,Wassertechnische Anlage,
 D08.01,Technik Gebäude,Wassertechnische Anlage,Wasserversorgung
 D08.02,Technik Gebäude,Wassertechnische Anlage,Wasserbehandlung
 D08.03,Technik Gebäude,Wassertechnische Anlage,Wasserspeicher
 D08.04,Technik Gebäude,Wassertechnische Anlage,Wasserverteilung
 D08.05,Technik Gebäude,Wassertechnische Anlage,"Wasser: Armatur, Apparat"
 D08.06,Technik Gebäude,Wassertechnische Anlage,Wasser: Installationselement
-D09,Technik Gebäude,,Abwassertechnische Anlage
+D09,Technik Gebäude,Abwassertechnische Anlage,
 D09.01,Technik Gebäude,Abwassertechnische Anlage,Abwasserentsorgung
 D09.02,Technik Gebäude,Abwassertechnische Anlage,Abwasserbehandlung
 D09.03,Technik Gebäude,Abwassertechnische Anlage,Abwasserspeicher
 D09.04,Technik Gebäude,Abwassertechnische Anlage,Abwassersammlung
 D09.05,Technik Gebäude,Abwassertechnische Anlage,"Abwasser: Armatur, Apparat"
-D10,Technik Gebäude,,Gastechnische Anlage
+D10,Technik Gebäude,Gastechnische Anlage,
 D10.01,Technik Gebäude,Gastechnische Anlage,Gasversorgung
 D10.02,Technik Gebäude,Gastechnische Anlage,Gasbehandlung
 D10.03,Technik Gebäude,Gastechnische Anlage,Gasspeicherung
 D10.04,Technik Gebäude,Gastechnische Anlage,Gasverteilung
 D10.05,Technik Gebäude,Gastechnische Anlage,"Gas: Armatur, Apparat"
-D11,Technik Gebäude,,Anlage für Spezialmedien
+D11,Technik Gebäude,Anlage für Spezialmedien,
 D11.01,Technik Gebäude,Anlage für Spezialmedien,"Spezialmedien: Versorgung, Entsorgung"
 D11.02,Technik Gebäude,Anlage für Spezialmedien,Spezialmedien: Aufbereitung
 D11.03,Technik Gebäude,Anlage für Spezialmedien,Spezialmedien: Speicherung
 D11.04,Technik Gebäude,Anlage für Spezialmedien,Spezialmedien: Verteilung
 D11.05,Technik Gebäude,Anlage für Spezialmedien,"Spezialmedien: Armatur, Apparat"
-D12,Technik Gebäude,,Beförderungsanlage
+D12,Technik Gebäude,Beförderungsanlage,
 D12.01,Technik Gebäude,Beförderungsanlage,Personenaufzug
 D12.02,Technik Gebäude,Beförderungsanlage,Lasten- und Serviceaufzug
 D12.03,Technik Gebäude,Beförderungsanlage,Spezialaufzug
 D12.04,Technik Gebäude,Beförderungsanlage,Fahrtreppe
 D12.05,Technik Gebäude,Beförderungsanlage,Fahrsteig
 D12.06,Technik Gebäude,Beförderungsanlage,"Hebeeinrichtung, Verladestation"
-E,Äussere Wandbekleidung Gebäude,,Äussere Wandbekleidung Gebäude
-E01,Äussere Wandbekleidung Gebäude,,Äussere Wandbekleidung unter Terrain
+E,Äussere Wandbekleidung Gebäude,,
+E01,Äussere Wandbekleidung Gebäude,Äussere Wandbekleidung unter Terrain,
 E01.01,Äussere Wandbekleidung Gebäude,Äussere Wandbekleidung unter Terrain,Wandabdichtung unter Terrain
 E01.02,Äussere Wandbekleidung Gebäude,Äussere Wandbekleidung unter Terrain,Aussenwärmedämmung unter Terrain
 E01.03,Äussere Wandbekleidung Gebäude,Äussere Wandbekleidung unter Terrain,Schutzschicht unter Terrain
-E02,Äussere Wandbekleidung Gebäude,,Äussere Wandbekleidung über Terrain
+E02,Äussere Wandbekleidung Gebäude,Äussere Wandbekleidung über Terrain,
 E02.01,Äussere Wandbekleidung Gebäude,Äussere Wandbekleidung über Terrain,Äussere Beschichtung
 E02.02,Äussere Wandbekleidung Gebäude,Äussere Wandbekleidung über Terrain,Aussenwärmedämmsystem
 E02.03,Äussere Wandbekleidung Gebäude,Äussere Wandbekleidung über Terrain,Fassadenbekleidung
 E02.04,Äussere Wandbekleidung Gebäude,Äussere Wandbekleidung über Terrain,Systemfassade
 E02.05,Äussere Wandbekleidung Gebäude,Äussere Wandbekleidung über Terrain,Fassadenbekleidung Untersicht
 E02.06,Äussere Wandbekleidung Gebäude,Äussere Wandbekleidung über Terrain,Aussen liegende Absturzsicherung
-E03,Äussere Wandbekleidung Gebäude,,Element in Aussenwand
+E03,Äussere Wandbekleidung Gebäude,Element in Aussenwand,
 E03.01,Äussere Wandbekleidung Gebäude,Element in Aussenwand,Fenster
 E03.02,Äussere Wandbekleidung Gebäude,Element in Aussenwand,Aussentür
 E03.03,Äussere Wandbekleidung Gebäude,Element in Aussenwand,Aussentor
 E03.04,Äussere Wandbekleidung Gebäude,Element in Aussenwand,"Sonnenschutz, Wetterschutz"
 E03.05,Äussere Wandbekleidung Gebäude,Element in Aussenwand,Absturzsicherung
-F,Bedachung Gebäude,,Bedachung Gebäude
-F01,Bedachung Gebäude,,Dachhaut
+F,Bedachung Gebäude,,
+F01,Bedachung Gebäude,Dachhaut,
 F01.01,Bedachung Gebäude,Dachhaut,Dachabdichtung unter Terrain
 F01.02,Bedachung Gebäude,Dachhaut,Bedachung Flachdach
 F01.03,Bedachung Gebäude,Dachhaut,Bedachung geneigtes Dach
 F01.04,Bedachung Gebäude,Dachhaut,Systemdach
-F02,Bedachung Gebäude,,Element zu Dach
+F02,Bedachung Gebäude,Element zu Dach,
 F02.01,Bedachung Gebäude,Element zu Dach,Element zu Flachdach
 F02.02,Bedachung Gebäude,Element zu Dach,Element zu geneigtem Dach
 F02.03,Bedachung Gebäude,Element zu Dach,Schutzanlage zu Dach
-G,Ausbau Gebäude,,Ausbau Gebäude
-G01,Ausbau Gebäude,,"Trennwand, Innentür, Innentor"
+G,Ausbau Gebäude,,
+G01,Ausbau Gebäude,"Trennwand, Innentür, Innentor",
 G01.01,Ausbau Gebäude,"Trennwand, Innentür, Innentor",Fest stehende Trennwand
 G01.02,Ausbau Gebäude,"Trennwand, Innentür, Innentor",Bewegliche Trennwand
 G01.03,Ausbau Gebäude,"Trennwand, Innentür, Innentor",Schachtfront
 G01.04,Ausbau Gebäude,"Trennwand, Innentür, Innentor",Innenfenster
 G01.05,Ausbau Gebäude,"Trennwand, Innentür, Innentor",Innentür
 G01.06,Ausbau Gebäude,"Trennwand, Innentür, Innentor",Innentor
-G02,Ausbau Gebäude,,Bodenbelag
+G02,Ausbau Gebäude,Bodenbelag,
 G02.01,Ausbau Gebäude,Bodenbelag,Unterkonstruktion zu Bodenbelag
 G02.02,Ausbau Gebäude,Bodenbelag,Bodenbelag
-G03,Ausbau Gebäude,,Wandbekleidung
+G03,Ausbau Gebäude,Wandbekleidung,
 G03.01,Ausbau Gebäude,Wandbekleidung,Unterkonstruktion zu Wandbekleidung
 G03.02,Ausbau Gebäude,Wandbekleidung,Wandbekleidung
-G04,Ausbau Gebäude,,Deckenbekleidung
+G04,Ausbau Gebäude,Deckenbekleidung,
 G04.01,Ausbau Gebäude,Deckenbekleidung,Unterkonstruktion zu Deckenbekleidung
 G04.02,Ausbau Gebäude,Deckenbekleidung,Deckenbekleidung
-G05,Ausbau Gebäude,,"Einbauten, Schutzeinrichtung zu Ausbau"
+G05,Ausbau Gebäude,"Einbauten, Schutzeinrichtung zu Ausbau",
 G05.01,Ausbau Gebäude,"Einbauten, Schutzeinrichtung zu Ausbau","Einbauschrank, Regal, Ablage"
 G05.02,Ausbau Gebäude,"Einbauten, Schutzeinrichtung zu Ausbau",Einbauküche
 G05.03,Ausbau Gebäude,"Einbauten, Schutzeinrichtung zu Ausbau",Innerer Fensterausbau
@@ -233,37 +233,37 @@ G05.04,Ausbau Gebäude,"Einbauten, Schutzeinrichtung zu Ausbau",Innerer Abschlus
 G05.05,Ausbau Gebäude,"Einbauten, Schutzeinrichtung zu Ausbau","Absturz-, Anprallschutzeinrichtung"
 G05.06,Ausbau Gebäude,"Einbauten, Schutzeinrichtung zu Ausbau",Sonderbauteil
 G05.07,Ausbau Gebäude,"Einbauten, Schutzeinrichtung zu Ausbau","Kleinbauteil, Schutzraumeinrichtung"
-G06,Ausbau Gebäude,,Ergänzende Leistung zu Ausbau
+G06,Ausbau Gebäude,Ergänzende Leistung zu Ausbau,
 G06.01,Ausbau Gebäude,Ergänzende Leistung zu Ausbau,"Durchbruch, Schlitz zu Ausbau"
 G06.02,Ausbau Gebäude,Ergänzende Leistung zu Ausbau,Abschottung
 G06.03,Ausbau Gebäude,Ergänzende Leistung zu Ausbau,Reinigung
 G06.04,Ausbau Gebäude,Ergänzende Leistung zu Ausbau,Trocknung
-H,Nutzungsspezifische Anlage Gebäude,,Nutzungsspezifische Anlage Gebäude
-H01,Nutzungsspezifische Anlage Gebäude,,Produktionsanlage
+H,Nutzungsspezifische Anlage Gebäude,,
+H01,Nutzungsspezifische Anlage Gebäude,Produktionsanlage,
 H01.01,Nutzungsspezifische Anlage Gebäude,Produktionsanlage,"Produktionsanlage: Versorgung, Entsorgung"
 H01.02,Nutzungsspezifische Anlage Gebäude,Produktionsanlage,Produktionsanlage: Aufbereitung
 H01.03,Nutzungsspezifische Anlage Gebäude,Produktionsanlage,Produktionsanlage: Speicherung
 H01.04,Nutzungsspezifische Anlage Gebäude,Produktionsanlage,Produktionsanlage: Verteilung
 H01.05,Nutzungsspezifische Anlage Gebäude,Produktionsanlage,"Produktionsanlage: Armatur, Apparat"
-H02,Nutzungsspezifische Anlage Gebäude,,Laboranlage
+H02,Nutzungsspezifische Anlage Gebäude,Laboranlage,
 H02.01,Nutzungsspezifische Anlage Gebäude,Laboranlage,"Laboranlage: Versorgung, Entsorgung"
 H02.02,Nutzungsspezifische Anlage Gebäude,Laboranlage,Laboranlage: Aufbereitung
 H02.03,Nutzungsspezifische Anlage Gebäude,Laboranlage,Laboranlage: Speicherung
 H02.04,Nutzungsspezifische Anlage Gebäude,Laboranlage,Laboranlage: Verteilung
 H02.05,Nutzungsspezifische Anlage Gebäude,Laboranlage,"Laboranlage: Armatur, Apparat"
-H03,Nutzungsspezifische Anlage Gebäude,,Grossküche
+H03,Nutzungsspezifische Anlage Gebäude,Grossküche,
 H03.01,Nutzungsspezifische Anlage Gebäude,Grossküche,"Grossküche: Versorgung, Entsorgung"
 H03.02,Nutzungsspezifische Anlage Gebäude,Grossküche,Grossküche: Aufbereitung
 H03.03,Nutzungsspezifische Anlage Gebäude,Grossküche,Grossküche: Lagerung
 H03.04,Nutzungsspezifische Anlage Gebäude,Grossküche,Grossküche: Verteilung
 H03.05,Nutzungsspezifische Anlage Gebäude,Grossküche,"Grossküche: Armatur, Apparat"
-H04,Nutzungsspezifische Anlage Gebäude,,"Wäscherei-, Reinigungsanlage"
+H04,Nutzungsspezifische Anlage Gebäude,"Wäscherei-, Reinigungsanlage",
 H04.01,Nutzungsspezifische Anlage Gebäude,"Wäscherei-, Reinigungsanlage","Wäscherei-, Reinigungsanlage: Versorgung, Entsorgung"
 H04.02,Nutzungsspezifische Anlage Gebäude,"Wäscherei-, Reinigungsanlage","Wäscherei-, Reinigungsanlage: Aufbereitung"
 H04.03,Nutzungsspezifische Anlage Gebäude,"Wäscherei-, Reinigungsanlage","Wäscherei-, Reinigungsanlage: Speicherung"
 H04.04,Nutzungsspezifische Anlage Gebäude,"Wäscherei-, Reinigungsanlage","Wäscherei-, Reinigungsanlage: Verteilung"
 H04.05,Nutzungsspezifische Anlage Gebäude,"Wäscherei-, Reinigungsanlage","Wäscherei-, Reinigungsanlage: Armatur, Apparat"
-H05,Nutzungsspezifische Anlage Gebäude,,Anlage für Gesundheit
+H05,Nutzungsspezifische Anlage Gebäude,Anlage für Gesundheit,
 H05.01,Nutzungsspezifische Anlage Gebäude,Anlage für Gesundheit,Gerät für Vitaldatenüberwachung
 H05.02,Nutzungsspezifische Anlage Gebäude,Anlage für Gesundheit,Einrichtung für Diagnostik
 H05.03,Nutzungsspezifische Anlage Gebäude,Anlage für Gesundheit,"Gerät für Behandlung, Pflege"
@@ -276,22 +276,22 @@ H05.09,Nutzungsspezifische Anlage Gebäude,Anlage für Gesundheit,Medizinische T
 H05.10,Nutzungsspezifische Anlage Gebäude,Anlage für Gesundheit,Medizinisches Kleininventar
 H05.11,Nutzungsspezifische Anlage Gebäude,Anlage für Gesundheit,Medizinisches Transportmittel
 H05.12,Nutzungsspezifische Anlage Gebäude,Anlage für Gesundheit,Medizinisches Betriebsmittel
-H06,Nutzungsspezifische Anlage Gebäude,,"Anlage für Bildung, Kultur"
+H06,Nutzungsspezifische Anlage Gebäude,"Anlage für Bildung, Kultur",
 H06.01,Nutzungsspezifische Anlage Gebäude,"Anlage für Bildung, Kultur","Bildung, Kultur: Versorgung, Entsorgung"
 H06.02,Nutzungsspezifische Anlage Gebäude,"Anlage für Bildung, Kultur","Bildung, Kultur: Apparat"
 H06.03,Nutzungsspezifische Anlage Gebäude,"Anlage für Bildung, Kultur","Bildung, Kultur: Steuerung"
 H06.04,Nutzungsspezifische Anlage Gebäude,"Anlage für Bildung, Kultur","Bildung, Kultur: Einbauten"
-H07,Nutzungsspezifische Anlage Gebäude,,"Sportanlage, Freizeitanlage"
+H07,Nutzungsspezifische Anlage Gebäude,"Sportanlage, Freizeitanlage",
 H07.01,Nutzungsspezifische Anlage Gebäude,"Sportanlage, Freizeitanlage","Sportanlage, Freizeitanlage: Versorgung, Entsorgung"
 H07.02,Nutzungsspezifische Anlage Gebäude,"Sportanlage, Freizeitanlage","Sportanlage, Freizeitanlage: Apparat"
 H07.03,Nutzungsspezifische Anlage Gebäude,"Sportanlage, Freizeitanlage","Sportanlage, Freizeitanlage: Steuerung"
 H07.04,Nutzungsspezifische Anlage Gebäude,"Sportanlage, Freizeitanlage","Sportanlage, Freizeitanlage: Einbauten"
-H08,Nutzungsspezifische Anlage Gebäude,,Anlage für Erholung
+H08,Nutzungsspezifische Anlage Gebäude,Anlage für Erholung,
 H08.01,Nutzungsspezifische Anlage Gebäude,Anlage für Erholung,"Erholungsanlage: Versorgung, Entsorgung"
 H08.02,Nutzungsspezifische Anlage Gebäude,Anlage für Erholung,Erholungsanlage: Apparat
 H08.03,Nutzungsspezifische Anlage Gebäude,Anlage für Erholung,Erholungsanlage: Steuerung
 H08.04,Nutzungsspezifische Anlage Gebäude,Anlage für Erholung,Erholungsanlage: Einbauten
-H09,Nutzungsspezifische Anlage Gebäude,,Weitere nutzungsspezifische Anlage
+H09,Nutzungsspezifische Anlage Gebäude,Weitere nutzungsspezifische Anlage,
 H09.01,Nutzungsspezifische Anlage Gebäude,Weitere nutzungsspezifische Anlage,"Nutzungsspezifische Anlage: Versorgung, Entsorgung"
 H09.02,Nutzungsspezifische Anlage Gebäude,Weitere nutzungsspezifische Anlage,Nutzungsspezifische Anlage: Aufbereitung
 H09.03,Nutzungsspezifische Anlage Gebäude,Weitere nutzungsspezifische Anlage,"Nutzungsspezifische Anlage: Speicherung, Lagerung"
@@ -301,11 +301,11 @@ H09.06,Nutzungsspezifische Anlage Gebäude,Weitere nutzungsspezifische Anlage,Pa
 H09.07,Nutzungsspezifische Anlage Gebäude,Weitere nutzungsspezifische Anlage,Materialtransportanlage
 H09.08,Nutzungsspezifische Anlage Gebäude,Weitere nutzungsspezifische Anlage,Kühlzelle
 H09.09,Nutzungsspezifische Anlage Gebäude,Weitere nutzungsspezifische Anlage,Lagereinrichtung
-I,Umgebung Gebäude,,Umgebung Gebäude
-I01,Umgebung Gebäude,,Umgebungsgestaltung
+I,Umgebung Gebäude,,
+I01,Umgebung Gebäude,Umgebungsgestaltung,
 I01.01,Umgebung Gebäude,Umgebungsgestaltung,Geländeanpassung
 I01.02,Umgebung Gebäude,Umgebungsgestaltung,Tief liegende Entwässerung
-I02,Umgebung Gebäude,,Bauwerk in der Umgebung
+I02,Umgebung Gebäude,Bauwerk in der Umgebung,
 I02.01,Umgebung Gebäude,Bauwerk in der Umgebung,Böschungsverbau
 I02.02,Umgebung Gebäude,Bauwerk in der Umgebung,Stützmauer
 I02.03,Umgebung Gebäude,Bauwerk in der Umgebung,Frei stehende Wand
@@ -314,7 +314,7 @@ I02.05,Umgebung Gebäude,Bauwerk in der Umgebung,Kleinbauwerk
 I02.06,Umgebung Gebäude,Bauwerk in der Umgebung,Unterirdisches Bauwerk
 I02.07,Umgebung Gebäude,Bauwerk in der Umgebung,"Absturz-, Anprallschutzeinrichtung für Umgebung"
 I02.08,Umgebung Gebäude,Bauwerk in der Umgebung,Einfriedung
-I03,Umgebung Gebäude,,Grünfläche
+I03,Umgebung Gebäude,Grünfläche,
 I03.01,Umgebung Gebäude,Grünfläche,Vegetationstragschicht
 I03.02,Umgebung Gebäude,Grünfläche,Saatfläche
 I03.03,Umgebung Gebäude,Grünfläche,"Flächenbepflanzung, Hecke"
@@ -324,12 +324,12 @@ I03.06,Umgebung Gebäude,Grünfläche,"Einfassung, Abschluss Grünfläche"
 I03.07,Umgebung Gebäude,Grünfläche,Naturnahe Wasserfläche
 I03.08,Umgebung Gebäude,Grünfläche,Ingenieurbiologische Massnahme
 I03.09,Umgebung Gebäude,Grünfläche,Pflegemassnahme bis Übergabe
-I04,Umgebung Gebäude,,Hartfläche
+I04,Umgebung Gebäude,Hartfläche,
 I04.01,Umgebung Gebäude,Hartfläche,"Fundations-, Tragschicht"
 I04.02,Umgebung Gebäude,Hartfläche,"Einfassung, Abschluss Hartfläche"
 I04.03,Umgebung Gebäude,Hartfläche,Deckschicht
 I04.04,Umgebung Gebäude,Hartfläche,Bodenmarkierung
-I05,Umgebung Gebäude,,Technik Umgebung
+I05,Umgebung Gebäude,Technik Umgebung,
 I05.01,Umgebung Gebäude,Technik Umgebung,Elektroanlage Starkstrom für Umgebung
 I05.02,Umgebung Gebäude,Technik Umgebung,Elektroanlage Schwachstrom für Umgebung
 I05.03,Umgebung Gebäude,Technik Umgebung,Wärmeanlage für Umgebung
@@ -338,29 +338,29 @@ I05.05,Umgebung Gebäude,Technik Umgebung,Sanitäre Anlage für Umgebung
 I05.06,Umgebung Gebäude,Technik Umgebung,Oberflächenentwässerung für Umgebung
 I05.07,Umgebung Gebäude,Technik Umgebung,Transportanlage für Umgebung
 I05.08,Umgebung Gebäude,Technik Umgebung,Perimeterschutz
-I06,Umgebung Gebäude,,Ausstattung Umgebung
+I06,Umgebung Gebäude,Ausstattung Umgebung,
 I06.01,Umgebung Gebäude,Ausstattung Umgebung,Mobile Ausstattung für Umgebung
 I06.02,Umgebung Gebäude,Ausstattung Umgebung,Fixierte Ausstattung für Umgebung
 I06.03,Umgebung Gebäude,Ausstattung Umgebung,"Spiel-, Sportgerät für Umgebung"
 I06.04,Umgebung Gebäude,Ausstattung Umgebung,Abfallentsorgungseinrichtung für Umgebung
-J,Ausstattung Gebäude,,Ausstattung Gebäude
-J01,Ausstattung Gebäude,,Mobiliar
+J,Ausstattung Gebäude,,
+J01,Ausstattung Gebäude,Mobiliar,
 J01.01,Ausstattung Gebäude,Mobiliar,Allgemeines Mobiliar
 J01.02,Ausstattung Gebäude,Mobiliar,Nutzungsspezifisches Mobiliar
 J01.03,Ausstattung Gebäude,Mobiliar,Mobile Leuchte
 J01.04,Ausstattung Gebäude,Mobiliar,Signaletik
-J02,Ausstattung Gebäude,,Kleininventar
+J02,Ausstattung Gebäude,Kleininventar,
 J02.01,Ausstattung Gebäude,Kleininventar,Allgemeines Kleininventar
 J02.02,Ausstattung Gebäude,Kleininventar,Nutzungsspezifisches Kleininventar
 J02.03,Ausstattung Gebäude,Kleininventar,Mobiles Gerät
-J03,Ausstattung Gebäude,,Textilien
+J03,Ausstattung Gebäude,Textilien,
 J03.01,Ausstattung Gebäude,Textilien,Allgemeine Textilien
 J03.02,Ausstattung Gebäude,Textilien,Nutzungsspezifische Textilien
-J04,Ausstattung Gebäude,,Kunst am Bau
+J04,Ausstattung Gebäude,Kunst am Bau,
 J04.01,Ausstattung Gebäude,Kunst am Bau,Kunstobjekt
 J04.02,Ausstattung Gebäude,Kunst am Bau,Künstlerisch gestaltetes Bauteil
-V,Planungskosten,,Planungskosten
-V01,Planungskosten,,Planer
+V,Planungskosten,,
+V01,Planungskosten,Planer,
 V01.01,Planungskosten,Planer,Architekt
 V01.02,Planungskosten,Planer,Landschaftsarchitekt
 V01.03,Planungskosten,Planer,Bauingenieur
@@ -368,10 +368,10 @@ V01.04,Planungskosten,Planer,Fachingenieur Gebäudetechnik
 V01.05,Planungskosten,Planer,Spezialist
 V01.06,Planungskosten,Planer,"Generalplaner, Planergemeinschaft"
 V01.07,Planungskosten,Planer,Nebenkosten zu Planerleistungen
-V02,Planungskosten,,Unternehmer
+V02,Planungskosten,Unternehmer,
 V02.01,Planungskosten,Unternehmer,Beratung zur Planung
 V02.02,Planungskosten,Unternehmer,Vorbereitung zur Bewirtschaftung
-V03,Planungskosten,,Auftraggeber
+V03,Planungskosten,Auftraggeber,
 V03.01,Planungskosten,Auftraggeber,Auswahlverfahren
 V03.02,Planungskosten,Auftraggeber,Eigentümer
 V03.03,Planungskosten,Auftraggeber,Betreiber
@@ -379,36 +379,36 @@ V03.04,Planungskosten,Auftraggeber,Nutzer
 V03.05,Planungskosten,Auftraggeber,Berater
 V03.06,Planungskosten,Auftraggeber,"Anwalt, Experte, Gericht"
 V03.07,Planungskosten,Auftraggeber,"Plattform, Projektraum"
-W,Nebenkosten zu Erstellung,,Nebenkosten zu Erstellung
-W01,Nebenkosten zu Erstellung,,"Bewilligung, Gebühr"
+W,Nebenkosten zu Erstellung,,
+W01,Nebenkosten zu Erstellung,"Bewilligung, Gebühr",
 W01.01,Nebenkosten zu Erstellung,"Bewilligung, Gebühr",Bewilligung
 W01.02,Nebenkosten zu Erstellung,"Bewilligung, Gebühr",Gebühr
-W02,Nebenkosten zu Erstellung,,"Versicherung, Garantie"
+W02,Nebenkosten zu Erstellung,"Versicherung, Garantie",
 W02.01,Nebenkosten zu Erstellung,"Versicherung, Garantie",Versicherung
 W02.02,Nebenkosten zu Erstellung,"Versicherung, Garantie",Garantie
 W02.03,Nebenkosten zu Erstellung,"Versicherung, Garantie",Rückvergütung
-W03,Nebenkosten zu Erstellung,,Kapitalkosten
+W03,Nebenkosten zu Erstellung,Kapitalkosten,
 W03.01,Nebenkosten zu Erstellung,Kapitalkosten,Kapitalkosten zu Grundstück
 W03.02,Nebenkosten zu Erstellung,Kapitalkosten,Kapitalkosten zu Erstellung
-W04,Nebenkosten zu Erstellung,,"Bewirtung, Öffentlichkeitsarbeit, Entschädigung"
+W04,Nebenkosten zu Erstellung,"Bewirtung, Öffentlichkeitsarbeit, Entschädigung",
 W04.01,Nebenkosten zu Erstellung,"Bewirtung, Öffentlichkeitsarbeit, Entschädigung",Bewirtungskosten
 W04.02,Nebenkosten zu Erstellung,"Bewirtung, Öffentlichkeitsarbeit, Entschädigung",Öffentlichkeitsarbeit
 W04.03,Nebenkosten zu Erstellung,"Bewirtung, Öffentlichkeitsarbeit, Entschädigung",Entschädigung
-W05,Nebenkosten zu Erstellung,,Inbetriebnahme
+W05,Nebenkosten zu Erstellung,Inbetriebnahme,
 W05.01,Nebenkosten zu Erstellung,Inbetriebnahme,Inbetriebnahme Bauwerk
-W06,Nebenkosten zu Erstellung,,"Vermietung, Verkauf"
+W06,Nebenkosten zu Erstellung,"Vermietung, Verkauf",
 W06.01,Nebenkosten zu Erstellung,"Vermietung, Verkauf",Vergütung zu Erstvermietung
 W06.02,Nebenkosten zu Erstellung,"Vermietung, Verkauf",Nebenkosten zu Erstvermietung
 W06.03,Nebenkosten zu Erstellung,"Vermietung, Verkauf",Vergütung zu Verkauf
 W06.04,Nebenkosten zu Erstellung,"Vermietung, Verkauf",Nebenkosten zu Verkauf
-W07,Nebenkosten zu Erstellung,,Betriebserfolg
+W07,Nebenkosten zu Erstellung,Betriebserfolg,
 W07.01,Nebenkosten zu Erstellung,Betriebserfolg,Betriebsaufwand
 W07.02,Nebenkosten zu Erstellung,Betriebserfolg,Betriebsertrag
-Y,"Reserve, Teuerung",,"Reserve, Teuerung"
-Y01,"Reserve, Teuerung",,Reserve
+Y,"Reserve, Teuerung",,
+Y01,"Reserve, Teuerung",Reserve,
 Y01.01,"Reserve, Teuerung",Reserve,Reserve
-Y02,"Reserve, Teuerung",,Teuerung
+Y02,"Reserve, Teuerung",Teuerung,
 Y02.01,"Reserve, Teuerung",Teuerung,Teuerung
-Z,Mehrwertsteuer,,Mehrwertsteuer
-Z01,Mehrwertsteuer,,Mehrwertsteuer
+Z,Mehrwertsteuer,,
+Z01,Mehrwertsteuer,Mehrwertsteuer,
 Z01.01,Mehrwertsteuer,Mehrwertsteuer,Mehrwertsteuer
