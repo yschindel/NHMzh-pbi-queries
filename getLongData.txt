@@ -67,12 +67,17 @@ let
         )
         SELECT 
             c.*,
-            du.model_blob_id
+            du.model_blob_id,
+            ec.text_letter as ebkp_text_letter,
+            ec.text_number1 as ebkp_text_number1,
+            ec.text_number2 as ebkp_text_number2
         FROM CombinedData c
         LEFT JOIN [dbo].[data_updates] du ON 
             c.project = du.project AND 
             c.filename = du.filename AND 
             c.timestamp = du.timestamp
+        LEFT JOIN [dbo].[ebkp_codes] ec ON
+            c.eBKP = ec.code
         ORDER BY c.project, c.filename, c.id, c.sequence
     ", CreateNavigationProperties=false])
 in
